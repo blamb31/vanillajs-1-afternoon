@@ -1,33 +1,9 @@
 board = []
 
-// function play(clickedId) {
-//     let clickedElement = document.getElementById(clickedId)
-//     let playerSpan = document.getElementById('player')
-
-//     if(document.getElementById('button').clicked == true){
-//        alert("button was clicked");
-//     }
-    
-//     else if (playerSpan.innerText === "X") {
-//         playerSpan.innerText = "O"
-//         clickedElement.innerText = "X"
-//         board[clickedId] = "X"
-//     }
-//     else {
-//         playerSpan.innerText = "X"
-//         clickedElement.innerText = "O"
-//         board[clickedId] = "O"
-//     }  
-
 function play(clickedId) {
     let clickedElement = document.getElementById(clickedId)
     let playerSpan = document.getElementById('player')
-
-    if(document.getElementById('button').clicked == true){
-       alert("button was clicked");
-    }
-    
-    else if (playerSpan.innerText === "X") {
+    if (playerSpan.innerText === "X") {
         playerSpan.innerText = "O"
         clickedElement.innerText = "X"
         board[clickedId] = "X"
@@ -50,30 +26,37 @@ function play(clickedId) {
     if (topLeft !== undefined && topLeft === topRight && topLeft === topCenter){
         alert(`Congratulations! Player ${topLeft} wins!`)
         clearGame()
+        
     }
     if (middleLeft !== undefined && middleLeft === middleRight && middleLeft === middleCenter){
         alert(`Congratulations! Player ${middleLeft} wins!`)
         clearGame()
+        
     }
     if (bottomLeft !== undefined && bottomLeft === bottomRight && bottomLeft === bottomCenter){
         alert(`Congratulations! Player ${bottomLeft} wins!`)
         clearGame()
+        
     }
     if (topLeft !== undefined && topLeft === middleCenter && topLeft === bottomRight){
         alert(`Congratulations! Player ${topLeft} wins!`)
         clearGame()
+        
     }
     if (topRight !== undefined && topRight === middleCenter && topRight === bottomLeft){
         alert(`Congratulations! Player ${topRight} wins!`)
         clearGame()
+        
     }
     if (topLeft !== undefined && topLeft === middleLeft && topLeft === bottomLeft){
         alert(`Congratulations! Player ${topLeft} wins!`)
         clearGame()
+        
     }
     if (topCenter !== undefined && topCenter === middleCenter && topCenter === bottomCenter){
         alert(`Congratulations! Player ${topCenter} wins!`)
         clearGame()
+        
     }
     if (topRight !== undefined && topRight === middleRight && topRight === bottomRight){
         alert(`Congratulations! Player ${topRight} wins!`)
@@ -94,10 +77,11 @@ function play(clickedId) {
     }
 }
 
-// function clearGame() {
-//     for (let i = 0; i < 9; i++){
-//         clearingElement = document.getElementById(i)
-//         clearingElement.
-//     }
-// }
+function clearGame() {
+    for (let i = 0; i < 9; i++){
+        clearingElement = document.getElementById(i)
+        clearingElement.innerText = ''
+        board = []
+    }
+}
 

@@ -83,5 +83,4 @@ function clearGame() {
         clearingElement.innerText = ''
         board = []
     }
-}
-
+}  

@@ -3,7 +3,12 @@ board = []
 function play(clickedId) {
     let clickedElement = document.getElementById(clickedId)
     let playerSpan = document.getElementById('player')
-    if (playerSpan.innerText === "X") {
+
+    if(clickedElement.innerText === "X" ||clickedElement.innerText === "O") {
+        alert (`That space has already been selected`)
+    }
+
+    else if (playerSpan.innerText === "X") {
         playerSpan.innerText = "O"
         clickedElement.innerText = "X"
         board[clickedId] = "X"

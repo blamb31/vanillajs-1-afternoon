@@ -235,7 +235,8 @@ function setCard() {
 
 
 ## Black Diamond 
-- Create a button that resets the attributes of each card. 
+- Create a button that resets the attributes of each card.
+ 
 
 
 ## Contributions
